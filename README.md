@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+﻿This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -66,3 +66,86 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+-------------------------------------------------------------------------------------------------------------------------
+
+EducaciónIT@Alumno-1006-12 MINGW64 ~/Documents/sheila_machado/app
+$ npm i -g json-server
+C:\Users\EducaciónIT\AppData\Roaming\npm\json-server -> C:\Users\EducaciónIT\AppData\Roaming\npm\node_modules\json-server\lib\cli\bin.js
++ json-server@0.15.1
+added 237 packages in 12.154s
+
+EducaciónIT@Alumno-1006-12 MINGW64 ~/Documents/sheila_machado/app
+$ echo {} >> db.json
+
+EducaciónIT@Alumno-1006-12 MINGW64 ~/Documents/sheila_machado/app (master)
+$ json-server --watch db.json
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+
+----------------------------------
+npm i -g json-server
+* crear un archivo <nombre>.json
+json-server --watch <nombre>.json
+{}
+
+PEDIDO
+fetch("http://localhost:3000/usuarios")
+
+.then((response)=>{ return response.json() })
+
+.then((response)=>{ console.log(response) })
+
+CREACION
+fetch("http://localhost:3000/usuarios", {
+	
+method : "POST",
+	
+headers: {"content-type" : "application/json"}, 
+body : JSON.stringify({nombre:"Horacio"})
+
+})
+
+PUT
+usar put para reemplazar solamente
+
+fetch("http://localhost:3000/usuarios", {
+	
+method : "PUT",
+	
+headers: {"content-type" : "application/json"}, 
+body : JSON.stringify({nombre:"Sheila"})
+
+})
+
+PATCH
+
+fetch("http://localhost:3000/usuarios/1", {
+	
+method : "PATCH",
+	
+headers: {"content-type" : "application/json"}, 
+body : JSON.stringify({edad:"28"})
+
+})
+
+DELETE
+fetch("http://localhost:3000/usuarios/1", {
+	
+method : "DELETE"
+	
+})
+
+02C.07a.b.j.

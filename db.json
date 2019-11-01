@@ -1,1 +1,24 @@
-{}
+{
+  "usuarios": [
+    {
+      "nombre": "Horacio",
+      "id": 1,
+      "edad": "28"
+    },
+    {
+      "nombre": "Sheila",
+      "edad": "29",
+      "id": 2
+    },
+    {
+      "nombre": "Yanina",
+      "edad": "18",
+      "id": 3
+    },
+    {
+      "nombre": "Paola",
+      "edad": "21",
+      "id": 4
+    }
+  ]
+}

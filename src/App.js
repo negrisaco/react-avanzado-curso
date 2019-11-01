@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './componentes/Header'
+import Main from './componentes/Main'
+import Footer from './componentes/Footer'
+import {Provider} from './contexto'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+    constructor(){
+        super()
+        // me permite la reaccion de los demas componentes a partir de este
+        this.state = {
+            usuarios: []
+        }
+    }
+
+    render(){
+        return(
+            <Provider value={this.state}>
+                <Header/>
+                <Main/>
+                <Footer/>
+            </Provider>
+        )
+    }
 }
 
-export default App;
+//exp
+/*export default () => 
+<Provider value={}>
+    <Header/>
+    <Main usuarios="Sheila"/>
+    <Footer/>
+</Provider>*/
