@@ -1,9 +1,17 @@
 import React from 'react'
+import {Consumer} from '../contexto'
 
-const Main = (props) => { //rfa: react function component
+const Main = () => { //rfa: react function component
     return (
         <main>
-            <h5>cualquier cosa {props.usuarios}</h5>
+            <h2>Home</h2>
+            <Consumer>
+                {({usuarios})=>{ // (contexto)
+                    // let {usuarios:usuarios} = contexto
+                    // let {usuarios} = contexto
+                    console.log(usuarios)
+                }}
+            </Consumer>
         </main>
     )
 }

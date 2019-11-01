@@ -13,6 +13,15 @@ export default class App extends React.Component {
         }
     }
 
+    componentDidMount() {
+        fetch("http://localhost:3000/usuarios")
+        .then((response)=>{ return response.json()})
+        .then((response)=>{ 
+            console.log("RESPU", response)
+            this.setState({usuarios: response})
+        })
+    }
+
     render(){
         return(
             <Provider value={this.state}>

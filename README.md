@@ -68,6 +68,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 -------------------------------------------------------------------------------------------------------------------------
+/Horacio
+
+advanced-new-file
+
 
 EducaciónIT@Alumno-1006-12 MINGW64 ~/Documents/sheila_machado/app
 $ npm i -g json-server
@@ -147,5 +151,27 @@ fetch("http://localhost:3000/usuarios/1", {
 method : "DELETE"
 	
 })
+
+
+Ofuscar variables de entorno
+
+PROPS: Los parametros de un componente
+
+<App x/> //x=true
+<App x="1"/> //x="1"
+<App x={expresion}/> //x=expresion {} son el escape de jsx, terminò ahì
+
+si utilizo funcion flecha sin clase no lo puedo instanciar con new luego
+
+Puedo usar REDUX (se instala aparte, tiene su propia consola, tengo reducer) o Context API (viene con react - mas facil de implementar pero no tiene reducer, lo perdes)
+Pero si es una app grande la API de Context queda chica
+
+Context API: Es un patron de diseño para compartir estados a travez de componentes hijos sin tener que pasar props
+
+1) Crear tu contexto con la funcion createContext (lo que quiero compartir en el contexto)
+2) Exporto el Provider, Consumer y el contexto entero
+3) Uso el Provider en el nivel superior de la aplicacion
+4) Le asigno un valor al contexto
+
 
 02C.07a.b.j.
