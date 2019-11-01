@@ -68,7 +68,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 -------------------------------------------------------------------------------------------------------------------------
-/Horacio
+/HoracioGutierrez/react-avanzado-accenture.git
 
 advanced-new-file
 
@@ -173,5 +173,20 @@ Context API: Es un patron de diseño para compartir estados a travez de componen
 3) Uso el Provider en el nivel superior de la aplicacion
 4) Le asigno un valor al contexto
 
+
+CICLO DE VIDA:
+
+mount:
+	constructor //preparo, armo lo que voy a dibujar
+	render //empiezo a dibujar el componente en la pantalla
+	componentDidMount
+	
+
+update:
+	render
+	shouldComponentUpdate
+
+unmount:
+	componentWillUnmount
 
 02C.07a.b.j.
