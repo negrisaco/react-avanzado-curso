@@ -177,16 +177,52 @@ Context API: Es un patron de diseño para compartir estados a travez de componen
 CICLO DE VIDA:
 
 mount:
-	constructor //preparo, armo lo que voy a dibujar
+	constructor se ejecuta una sola vez//preparo, armo lo que voy a dibujar
 	render //empiezo a dibujar el componente en la pantalla
 	componentDidMount
 	
 
 update:
-	render
+	render =  Se ejecuta cada vez que cambia el estado/contenido de props
 	shouldComponentUpdate
 
 unmount:
 	componentWillUnmount
 
 02C.07a.b.j.
+
+
+
+----------------------------------------------------- CLASE 2 ---------------------------------------
+
+SENTENCIA = no necesariamente te da algo a cambio
+
+(return)
+
+let a = if(cond) { return true } else { return false }
+// NO SE PPUEDE asignar a una variable porque no tiene retorno, no es expresion
+
+let  a = [1,2,3].forEach(()=>{}) => :void
+
+EXPRESION 
+
+let a = cond ? true : false
+let a = [1,2,3].map((e,i)=>{ return 0}) // El retorno de un map es una array de misma longitud del saliente
+
+
+Cada componente puede tener un estado si y solo si es de tipo Class, por defecto un componente no puede tener estado si es una funcion normal o lambda.
+
+Si quiero cambiarle el estado a un componente, solo lo puede hacer aquel componente que haya creado el estado usando la funcion 
+
+
+REACT-ROUTER-DOM: Es la historia que nos da componentes para la navegaciòn a travez de una pagina SPA.
+
+Tipos de navegaciones
+-History: BrowserRouter
+-Hash: HashRouter
+-Memoria: MemoryRouter
+-Static: StaticRouter
+
+Hook: Son funciones que podemos ejecutar en componentes funcionales, las cuales no emulan ciclos de vida, sin tener que migrar un componente a Class (use****)
+
+useEffect(()=>{},[])

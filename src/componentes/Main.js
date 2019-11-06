@@ -1,17 +1,20 @@
 import React from 'react'
-import {Consumer} from '../contexto'
+import Usuarios from '../paginas/Usuarios'
+import { Route, Switch } from 'react-router-dom'
+import Tickets from '../paginas/Ticket'
+import Home from '../paginas/Home'
 
 const Main = () => { //rfa: react function component
     return (
         <main>
             <h2>Home</h2>
-            <Consumer>
-                {({usuarios})=>{ // (contexto)
-                    // let {usuarios:usuarios} = contexto
-                    // let {usuarios} = contexto
-                    console.log(usuarios)
-                }}
-            </Consumer>
+
+            {/*<Usuarios/>*/}
+            <Switch>
+                <Route path="/" exact component={Home}/>
+                <Route path="/usuarios" component={Usuarios}/>
+                <Route path="/tickets" component={Tickets}/>
+            </Switch>
         </main>
     )
 }

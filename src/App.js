@@ -9,8 +9,10 @@ export default class App extends React.Component {
         super()
         // me permite la reaccion de los demas componentes a partir de este
         this.state = {
-            usuarios: []
+            usuarios: [],
+            eliminarUsuario : this.eliminarUsuario
         }
+        // this.eliminarUsuario = this.eliminarUsuario.bind(this)
     }
 
     componentDidMount() {
@@ -19,6 +21,23 @@ export default class App extends React.Component {
         .then((response)=>{ 
             console.log("RESPU", response)
             this.setState({usuarios: response})
+        })
+    }
+
+    eliminarUsuario = (i) => {
+        console.log('Eliminandoo....', i)
+        /*let nuevosUsuarios = []
+        nuevosUsuarios.concat(this.state.usuarios.slice(0,i))
+        nuevosUsuarios.concat(this.state.usuarios.slice(i+1))
+        this.setState({usuarios : nuevosUsuarios})*/
+        fetch(`http://localhost:3000/usuarios/${this.state.usuarios[i].id}`, {method : "DELETE"}).then(resp =>
+            console.log('RESP ', resp)
+        )
+        this.setState({
+            usuarios: [
+                ...this.state.usuarios.slice(0,i),
+                ...this.state.usuarios.slice(i+1)
+            ]
         })
     }
 
